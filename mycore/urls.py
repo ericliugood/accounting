@@ -15,6 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mydatabase.models import Account,Ledger,TransactionRecord
+
+admin.site.register(Account)
+admin.site.register(Ledger)
+admin.site.register(TransactionRecord)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
